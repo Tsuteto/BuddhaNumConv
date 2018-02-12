@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>仏典数詞変換</title>
+
+        <link rel="stylesheet" href="index.css">
+
+        <script src="lib/jquery-1.11.2.min.js"></script>
+        <script src="lib/bignumber.min.js"></script>
+        <script src="buddha-num-conv.js"></script>
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <div class="main">
+            <h1>仏典数詞変換</h1>
+            <p class="desc">
+                数字から複雑な上数の位取りを用いる<a href="https://ja.wikipedia.org/wiki/%E5%91%BD%E6%95%B0%E6%B3%95#%E4%BB%8F%E5%85%B8%E3%81%AE%E6%95%B0%E8%A9%9E">仏典数詞</a>表記に変換します。
+            </p>
+
+            <form id="form">
+                <div class="box box-input">
+                    <div class="title">
+                        <div class="switcher" id="form-switcher">
+                            <input type="button" id="sw-exp" class="btn" value="指数"/><input type="button" id="sw-number" class="btn" value="数字"/>
+                        </div>
+                    </div>
+                    <div class="cont">
+                        <div id="expression">
+                            <input type="text" id="input-coef"/><span id="mid">&nbsp;×&nbsp;10&nbsp;</span><input type="text" id="input-exp"/>
+                        </div>
+                        <div id="number">
+                            <textarea id="input-number"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box box-conv">
+                    <div class="title">
+                        <button type="submit" id="conv" class="btn btn-light">変換</button>
+                    </div>
+                    <div class="cont">
+                        <div class="opt-row">
+                            <div class="opt-cell">
+                                <input type="checkbox" id="ruby" class="opt"/>
+                                <label class="opt" for="ruby">ルビを振る</label>
+                            </div>
+                            <div class="opt-cell">
+                                <input type="checkbox" id="spacing" class="opt"/>
+                                <label class="opt" for="spacing">上数数詞を区切る</label>
+                            </div>
+                            <div class="opt-cell">
+                                <input type="checkbox" id="allInKanji" class="opt"/>
+                                <label class="opt" for="allInKanji">漢数字で表記</label>
+                            </div>
+                            <div class="opt-cell">
+                                <input type="checkbox" id="rakushaToComma" class="opt"/>
+                                <label class="opt" for="rakushaToComma">洛叉をカンマで表記</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box box-result">
+                    <div class="title">仏典数詞表記</div>
+                    <div class="cont" id="result"></div>
+                </div>
+            </form>
+
+            <ul id="note">
+                <li>仏典数詞の表記方法は一般的な上数の命数法に基づきます。何か他に決まりがあったらおしえてください＞＜</li>
+                <li>小数が発生した場合は切り捨てます。</li>
+                <li>変換処理はJavaScriptで完結しサーバ等との通信は発生しません。</li>
+                <li>基本的に「指数」入力モードをオススメします。</li>
+                <li>「数字」入力モードの桁数制限は理論上10億桁までです。大量の数字を変換する際は時間と負荷が掛かる場合があるので注意。</li>
+            </ul>
+
+            <p>v1.0.0 - made by <a href="https://twitter.com/tsuteto">@tsuteto</a>, 2018.02.12<br/>
+                <a href="https://github.com/Tsuteto/BuddhaNumConv">Source available on GitHub</a></p>
+        </div>
+    </body>
+</html>
