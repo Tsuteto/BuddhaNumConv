@@ -3,6 +3,9 @@
 せっかく巨大数が扱える命数法があるのに使わないのはもったないと思って作りました。  
 実用性は定かではありませんけど、無量大数を超える数が実際に表記できるようになる程度の価値はあると思います。。
 
+ここですぐ使えます。
+https://tsuteto.github.io/BuddhaNumConv/
+
 ## Dependencies
 - BigNumber.js
 - jQuery
