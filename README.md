@@ -12,5 +12,5 @@
 MIT License
 
 ## Acknowledgment
-[BigNumber.js](https://github.com/MikeMcl/bignumber.js) by Michael Mclaughlin, an awesome large number library  
-[思索の遊び場 - 無量大数の彼方へ](http://www.sf.airnet.ne.jp/ts/language/largenumber.html), a web page explaining me large number systems
+[BigNumber.js](https://github.com/MikeMcl/bignumber.js) by Michael Mclaughlin, an awesome large number library.  
+[思索の遊び場 - 無量大数の彼方へ](http://www.sf.airnet.ne.jp/ts/language/largenumber.html) by 高杉親知, a web page explaining me large number systems.
